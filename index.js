@@ -11,7 +11,7 @@ const disemvowel = () => {
   }
   p.textContent = output;
 };
-debugger;
+
 const isPalindrome = () => {
   const str = document.querySelector("#is-palindrome-input");
   const p = document.querySelectorAll("#is-palindrome-p");
@@ -42,11 +42,11 @@ const onlyOdds = (arr) => {
 };
 
 const favoriteNumbers = () => {
-  let list = Number(document.querySelector("#favorite-numbers < li").value);
+  let list = Number(document.querySelector("#favorite-numbers > li").value);
   let arr = [];
-  list.forEach((listItem) => {
-    arr.push(listItem.textContent);
-  });
+//   list.forEach((listItem) => {
+    arr.push(Number(list.textContent));
+//   });
   const sum = sum(arr);
   const averageOfNums = average();
   const onlyOddsOfNums = onlyOdds(arr);
