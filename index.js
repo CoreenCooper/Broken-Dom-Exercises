@@ -47,6 +47,7 @@ const favoriteNumbers = () => {
 //   list.forEach((listItem) => {
     arr.push(Number(list.textContent));
 //   });
+debugger
   const sum = sum(arr);
   const averageOfNums = average();
   const onlyOddsOfNums = onlyOdds(arr);
