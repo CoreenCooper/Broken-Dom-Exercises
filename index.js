@@ -13,16 +13,17 @@ const disemvowel = () => {
 };
 
 const isPalindrome = () => {
-  const str = document.querySelector("#is-palindrome-input");
+  const str = document.querySelector("#is-palindrome-input").value;
   const p = document.querySelectorAll("#is-palindrome-p");
   let result = "true";
-  for (let i = 0; i < str; i++) {
+  for (let i = 0; i < str.length; i++) {
     if (str[i] === str[str.length - i - 1]) {
       result = "false";
     }
   }
-  result = p.textContent;
+  p.textContent = result;
 };
+
 const sum = (arr) => {
   let sum = 0;
   for (let i = 0; i <= arr.length; i++) {
@@ -47,7 +48,6 @@ const favoriteNumbers = () => {
   list.forEach((listItem) => {
     arr.push(Number(list.textContent));
   });
-  debugger;
   const sum = sum(arr);
   const averageOfNums = average();
   const onlyOddsOfNums = onlyOdds(arr);
