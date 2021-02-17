@@ -2,10 +2,10 @@ const disemvowel = () => {
   const el = document.querySelector("#name-to-disemvowel");
   const p = document.getElementById("disemvowel-string");
   const str = el.value;
-  const output = "";
-  const vowels = "aeiou";
-  for (const char in str) {
-    if (vowels.includes(char.toUpperCase())) {
+  let output = "";
+  const vowels = "aeiouAEIOU";
+  for (const char of str) {
+    if (!vowels.includes(char)) {
       output += char;
     }
   }
@@ -44,10 +44,10 @@ const onlyOdds = (arr) => {
 const favoriteNumbers = () => {
   let list = Number(document.querySelector("#favorite-numbers > li").value);
   let arr = [];
-//   list.forEach((listItem) => {
+  list.forEach((listItem) => {
     arr.push(Number(list.textContent));
-//   });
-debugger
+  });
+  debugger;
   const sum = sum(arr);
   const averageOfNums = average();
   const onlyOddsOfNums = onlyOdds(arr);
