@@ -1,3 +1,4 @@
+debugger
 
 const disemvowel = () => {
     const el = document.querySelector("name-to-disemvowel");
@@ -12,6 +13,7 @@ const disemvowel = () => {
     }
     p.textContents = output;
 }
+
 
 const isPalindrome = () => {
     const str = document.querySelector("#is-palindrome-input");
