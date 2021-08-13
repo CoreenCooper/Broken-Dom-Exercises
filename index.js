@@ -1,18 +1,18 @@
-debugger
-
 const disemvowel = () => {
-    const el = document.querySelector("name-to-disemvowel");
-    const p = document.getElementById("#disemvowel-string");
+    const el = document.querySelector("#name-to-disemvowel");
+    
+    const p = document.getElementById("disemvowel-string");
+    let output = "";
     const str = el.value;
-    const output = "";
     const vowels = "aeiou"; 
-    for(const char in str) {
-        if(vowels.includes(char.toUpperCase())) {
+    for(const char of str) {
+        if(!vowels.includes(char.toUpperCase())) {
             output += char;
         }
     }
-    p.textContents = output;
+    p.textContent = output;
 }
+debugger
 
 
 const isPalindrome = () => {
